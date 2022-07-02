@@ -1,0 +1,11 @@
+{
+    "name": "ghost-imtc",
+    "description": "TC's personal Ghost theme",
+    "version": "1.0.0",
+    "license": "GNU GPL v3.0",
+    "author": {
+        "name": "TC",
+        "email" : "tonychyi@gmail.com",
+        "url": "https://imtc.top"
+    }
+}
