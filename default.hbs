@@ -16,12 +16,15 @@
 <body>
     <div class="site">
        {{> header}}
-        <div class="site-content">
+        <main class="site-content">
             {{{body}}}
-        </div>
+        </main>
  
     </div>
 
+    <script src="{{asset "js/lib/jquery-3.6.0.min.js"}}"></script>
+    <script src="{{asset "js/lib/masonry.pkgd.min.js"}}"></script>
+    <script src="{{asset "js/lib/imagesloaded.pkgd.min.js"}}"></script>
     
     <script src="{{asset "js/main.js"}}"></script>
     {{{block "scripts"}}}
