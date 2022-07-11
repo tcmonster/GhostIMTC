@@ -137,7 +137,7 @@ hr::after {
     left: 20px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     blockquote {
         margin-right: 0;
         margin-left: 0;
@@ -145,14 +145,18 @@ hr::after {
 }
 .site {
     width: 100%;
-    max-width: 1900px;
+    max-width: 1920px;
     margin: 0 auto;
 }
 
-/* Masonry Grid */
-
+/* Masonry Feed */
 .grid {
     width: 100%;
+    opacity: 0;
+    transition: opacity 0.1s var(--animation-base);
+}
+.grid.initialized {
+    opacity: 1;
 }
 .grid:after {
     content: '';
@@ -162,12 +166,55 @@ hr::after {
 
 .grid-sizer,
 .grid-item {
-    width: 33.333%;
+    width: 25%;
 }
-  
+.grid-item.grid-item--large {
+    width: 50%;
+}
+.grid-item.grid-item--full {
+    width: 100%;
+}
+@media (max-width: 1600px) {
+    .grid-sizer,
+    .grid-item {
+        width: calc(100% / 3);
+    }
+    .grid-item.grid-item--large {
+        width: calc(100% / 3 * 2);
+    }
+}
+@media (max-width: 768px) {
+    .grid-sizer,
+    .grid-item {
+        width: 50%;
+    }
+    .grid-item.grid-item--large {
+        width: 100%;
+    }
+}
 
 .grid-item img {
     width: 100%;
+}
+
+.infinite-scroll-request {
+    margin: 60px auto 0;
+    width: 32px;
+    height: 32px;
+    background-color: var(--black-color);
+    border-radius: 50%;
+    animation: scaleOut 1s infinite ease-in-out;
+}
+
+@keyframes scaleOut {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
 }
 
   

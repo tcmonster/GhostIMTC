@@ -2,10 +2,35 @@
     "name": "ghost-imtc",
     "description": "TC's personal Ghost theme",
     "version": "1.0.0",
-    "license": "GNU GPL v3.0",
+    "license": "GPL-3.0",
     "author": {
         "name": "TC",
         "email" : "tonychyi@gmail.com",
         "url": "https://imtc.top"
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "config": {
+        "posts_per_page": 10,
+        "image_sizes": {
+            "xs": {
+                "width": 200
+            },
+            "s": {
+                "width": 500
+            },
+            "m": {
+                "width": 960
+            },
+            "l": {
+                "width": 1200
+            },
+            "xl": {
+                "width": 1920
+            }
+        }
     }
 }
